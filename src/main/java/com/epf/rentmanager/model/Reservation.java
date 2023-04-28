@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Reservation {
     private long identifier;
-    private static long  client_id;
+    private  long  client_id;
 
     private long vehicle_id;
     private LocalDate debut;
@@ -30,7 +30,7 @@ public class Reservation {
         this.identifier = identifier;
     }
 
-    public static long getClient_id() {
+    public  long getClient_id() {
         return client_id;
     }
 

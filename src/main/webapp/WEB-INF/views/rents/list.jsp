@@ -37,19 +37,19 @@
 
                                 <c:forEach items="${reservations}" var="reservation">
                                 <tr>
-                                    <td>${reservation.identifier}.</td>
-                                    <td>${reservation.vehicle_id}.</td>
-                                    <td>${reservation.client_id}.</td>
-                                    <td>${reservation.debut}.</td>
-                                    <td>${reservation.fin}.</td>
+                                    <td>${reservation.identifier}</td>
+                                    <td>${reservation.vehicle_id}</td>
+                                    <td>${reservation.client_id}</td>
+                                    <td>${reservation.debut}</td>
+                                    <td>${reservation.fin}</td>
                                     <td>
                                         <a class="btn btn-primary " href="${pageContext.request.contextPath}/rents/details?id=${reservation.identifier}">
                                             <i class="fa fa-play"></i>
                                         </a>
-                                        <a class="btn btn-success " href="{pageContext.request.contextPath}/rents/update?id=${reservation.identifier}">
+                                        <a class="btn btn-success " href="${pageContext.request.contextPath}/rents/update?id=${reservation.identifier}">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a class="btn btn-danger" href="{pageContext.request.contextPath}/rents/delete?id=${reservation.identifier}">
+                                        <a class="btn btn-danger" href="${pageContext.request.contextPath}/rents/delete?id=${reservation.identifier}">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>

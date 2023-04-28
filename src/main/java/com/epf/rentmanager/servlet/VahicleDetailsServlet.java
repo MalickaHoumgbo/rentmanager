@@ -1,4 +1,6 @@
 package com.epf.rentmanager.servlet;
+
+import javax.servlet.http.HttpServlet;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +8,7 @@ import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,8 +24,7 @@ import com.epf.rentmanager.service.ReservationService;
 import com.epf.rentmanager.service.VehicleService;
 
 @WebServlet("/cars/details")
-
-public class VehicleDetailsServlet extends HttpServlet{
+public class VahicleDetailsServlet extends HttpServlet {
     @Autowired
     VehicleService vehicleService;
     @Autowired
@@ -44,26 +45,26 @@ public class VehicleDetailsServlet extends HttpServlet{
             throws ServletException, IOException {
         long identifier = Long.parseLong(request.getParameter("id"));
 
-        List<Reservation> resa = new ArrayList<>();
+        List<Reservation> Resa = new ArrayList<>();
         List<Client> clients = new ArrayList<>();
 
         Vehicle vehicle = new Vehicle();
 
         try {
             vehicle = vehicleService.findById((int) identifier);
-            resa = reservationService.findResaByVehicleId((int) identifier);
+            Resa = reservationService.findResaByVehicleId((int) identifier);
 
-            for (int i = 0; i < resa.size(); i++) {
-                clients.add(clientService.findById((int) clients.get(i).getIdentifier()));
+            for (int i = 0; i < Resa.size(); i++) {
+                clients.add(clientService.findById((int) Resa.get(i).getClient_id()));
             }
-            int reservations = resa.size();
-            int nbClient = clients.size();
+            int nbreResa = Resa.size();
+            int nbreClient = clients.size();
 
             request.setAttribute("vehicles", this.vehicleService.findById((int) identifier));
-            request.setAttribute("resa", resa);
-            request.setAttribute("clients", clients);
-            request.setAttribute("nbRents", reservations);
-            request.setAttribute("nbClient", nbClient);
+            request.setAttribute("listeResa", Resa);
+            request.setAttribute("listeClients", clients);
+            request.setAttribute("nombre_reservations", nbreResa);
+            request.setAttribute("nombre_clients", nbreClient);
 
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/vehicles/details.jsp");
             dispatcher.forward(request, response);
@@ -76,4 +77,5 @@ public class VehicleDetailsServlet extends HttpServlet{
             throws ServletException, IOException {
 
     }
+
 }

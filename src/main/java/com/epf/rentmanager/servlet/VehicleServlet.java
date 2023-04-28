@@ -27,11 +27,11 @@ public class VehicleServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            req.setAttribute("vehicles", this.vehicleService.findAll());
-            this.getServletContext().getRequestDispatcher("/WEB-INF/views/vehicles/list.jsp").forward(req, resp);
+            request.setAttribute("vehicles", this.vehicleService.findAll());
+            this.getServletContext().getRequestDispatcher("/WEB-INF/views/vehicles/list.jsp").forward(request, response);
         } catch ( ServiceException e) {
             e.printStackTrace();
         }

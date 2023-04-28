@@ -1,5 +1,4 @@
 com\epf\rentmanager\servlet\VehicleServlet.class
-com\epf\rentmanager\servlet\VehicleDetailsServlet.class
 com\epf\rentmanager\servlet\UserDetailsServlet.class
 com\epf\rentmanager\model\Reservation.class
 com\epf\rentmanager\servlet\RentCreateServlet.class
@@ -13,6 +12,7 @@ com\epf\rentmanager\configuration\WebConfiguration.class
 com\epf\rentmanager\servlet\RentDeleteServlet.class
 com\epf\rentmanager\main\Main.class
 com\epf\rentmanager\servlet\UserCreateServlet.class
+com\epf\rentmanager\servlet\VahicleDetailsServlet.class
 com\epf\rentmanager\model\Vehicle.class
 com\epf\rentmanager\servlet\HomeServlet.class
 com\epf\rentmanager\dao\ClientDao.class
