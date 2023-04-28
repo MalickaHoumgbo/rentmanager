@@ -18,7 +18,7 @@ public class Reservation {
         this.fin = fin;
     }
 
-    public Reservation() {
+    public Reservation(long client_id, long vehicle_id, LocalDate debut, LocalDate fin) {
 
     }
 

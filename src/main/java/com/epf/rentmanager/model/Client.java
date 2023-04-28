@@ -22,7 +22,11 @@ public class Client {
         this.birthdate = birthdate;
     }
 
+    public Client(String name, String lastName, String emailAdress, LocalDate birthdate) {
+    }
+
     public Client() {
+
     }
 
     public long getIdentifier() {
@@ -88,6 +92,7 @@ public class Client {
     public int hashCode() {
         return Objects.hash(identifier, name, lastName, emailAdress, birthdate);
     }
+
 
 
 }

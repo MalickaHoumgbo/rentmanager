@@ -1,6 +1,5 @@
 package com.epf.rentmanager.model;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 public class Vehicle {
@@ -20,6 +19,8 @@ public class Vehicle {
 
     public Vehicle() {
     }
+
+
 
     public long getIdentifier() {
         return identifier;

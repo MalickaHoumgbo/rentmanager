@@ -18,15 +18,9 @@ public class Main {
         Client c=new Client(123,"Malicka","Houmgbo","malickahoumgbo@gmail.com", LocalDate.of(2000,4,3));
         System.out.println(c);
 
-        List<Client> clients = null;
 
-        try {
-            clients = ClientService.getInstance().findAll();
-        } catch (DaoException e) {
-            e.printStackTrace();
-            throw new ServiceException();
-        }
-        System.out.println(clients);
+
+
 
 
 
