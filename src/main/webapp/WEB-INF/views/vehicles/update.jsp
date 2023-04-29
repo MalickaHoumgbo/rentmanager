@@ -25,7 +25,7 @@
                     <!-- Horizontal Form -->
                     <div class="box">
 
-                        <form class="form-horizontal" method="post" action="/rentmanager/vehicles/update">
+                        <form class="form-horizontal" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="manufacturer" class="col-sm-2 control-label">Marque</label>

@@ -17,9 +17,12 @@ public class Vehicle {
         this.nbplaces = nbplaces;
     }
 
-    public Vehicle() {
+    public Vehicle(String constructeurs, String modele, int nbplaces) {
     }
 
+    public Vehicle() {
+
+    }
 
 
     public long getIdentifier() {

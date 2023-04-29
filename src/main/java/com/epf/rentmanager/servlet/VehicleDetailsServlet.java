@@ -24,7 +24,7 @@ import com.epf.rentmanager.service.ReservationService;
 import com.epf.rentmanager.service.VehicleService;
 
 @WebServlet("/cars/details")
-public class VahicleDetailsServlet extends HttpServlet {
+public class VehicleDetailsServlet extends HttpServlet {
     @Autowired
     VehicleService vehicleService;
     @Autowired

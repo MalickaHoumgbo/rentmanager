@@ -49,7 +49,7 @@ public class VehicleCreateServlet extends HttpServlet {
         nbplaces = Integer.parseInt(request.getParameter("seats"));
 
 
-        Vehicle vehicle = new Vehicle();
+        Vehicle vehicle = new Vehicle(constructeurs,modele,nbplaces);
 
         try {
             vehicleService.create(vehicle);
