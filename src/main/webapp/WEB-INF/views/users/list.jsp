@@ -31,6 +31,7 @@
                                     <th>Nom</th>
                                     <th>Prenom</th>
                                     <th>Email</th>
+                                    <th>Date de naissance</th>
                                     <th>Action</th>
                                 </tr>
                                 <c:forEach items="${clients}" var="client">
@@ -39,6 +40,7 @@
                                     <td>${client.name}</td>
                                     <td>${client.lastName}</td>
                                     <td>${client.emailAdress}</td>
+                                    <td>${client.birthdate}</td>
                                     <td>
                                         <a class="btn btn-primary" href="${pageContext.request.contextPath}/users/details?id=${client.identifier}">
                                         <i class="fa fa-play"></i>

@@ -73,7 +73,7 @@
                                             <th>Nom</th>
                                             <th>Prenom</th>
                                             <th>Email</th>
-                                            <th style=>Anniversaire</th>
+                                            <th style=>Date de Niassance</th>
                                         </tr>
                                         <c:forEach items="$listeClients" var="client">
                                         <tr>
